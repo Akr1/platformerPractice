@@ -28,5 +28,14 @@ x += hsp;
 y += vsp;
 
 //apply the animation
-image_xscale = facing;
+//hsp not equal 0 means that player is moving
+if(hsp != 0){
+	image_xscale = facing;
+	//name of current sprite for the instance
+	sprite_index = s_player_walk;
+} else {
+	//else if hsp is 0, set player animation/sprite to 0
+	sprite_index = s_player_idle;
+}
+
 
