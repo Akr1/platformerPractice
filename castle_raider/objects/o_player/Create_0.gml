@@ -17,3 +17,14 @@ left = 0;
 right = 0;
 up = 0;
 right = 0;
+
+//states
+//constains keywords that describe a specific/possible state the player currently is in
+enum states {
+	IDLE,
+	WALK
+};
+
+//instance variable to store the actual state we are in
+//the player starts in the IDLE state when created
+state = states.IDLE;
