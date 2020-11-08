@@ -12,3 +12,8 @@ drag = .12;
 //The direction the player is facing. 1 indicates right/ -1 indicates left 
 facing = 1;
 
+//Movement
+left = 0;
+right = 0;
+up = 0;
+right = 0;
