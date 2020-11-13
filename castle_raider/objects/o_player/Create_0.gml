@@ -22,9 +22,36 @@ right = 0;
 //constains keywords that describe a specific/possible state the player currently is in
 enum states {
 	IDLE,
-	WALK
+	WALK,
+	JUMP,
+	ATTACK,
+	BLOCK,
+	CROUCH,
+	CROUCH_BLOCK
 };
 
 //instance variable to store the actual state we are in
 //the player starts in the IDLE state when created
 state = states.IDLE;
+
+//Using an array to easily change states
+//Creating a states array using enum states as keys to acces scripts that denote behaviour
+//for a specific state
+states_array[states.IDLE] = player_idle_state;
+states_array[states.WALK] = player_walk_state;
+states_array[states.JUMP] = player_jump_state;
+states_array[states.ATTACK] = player_attack_state;
+states_array[states.BLOCK] = player_block_state;
+states_array[states.CROUCH] = player_crouch_state;
+states_array[states.CROUCH_BLOCK] = player_crouch_block_state;
+
+//create sprites array
+//Uses the same reasoning as the states array to easily change the displayed sprite based on the 
+//current state we are in
+sprites_array[states.IDLE] = s_player_idle;
+sprites_array[states.WALK] = s_player_walk;
+sprites_array[states.JUMP] = s_player_jump;
+sprites_array[states.ATTACK] = s_player_attack;
+sprites_array[states.BLOCK] = s_player_block;
+sprites_array[states.CROUCH] = s_player_crouch;
+sprites_array[states.CROUCH_BLOCK] = s_player_crouch_block;
