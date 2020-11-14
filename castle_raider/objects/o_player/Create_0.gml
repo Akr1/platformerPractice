@@ -17,6 +17,8 @@ left = 0;
 right = 0;
 up = 0;
 right = 0;
+//attack
+attack = 0;
 
 //states
 //constains keywords that describe a specific/possible state the player currently is in

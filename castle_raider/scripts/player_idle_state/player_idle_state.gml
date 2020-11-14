@@ -10,6 +10,14 @@ function player_idle_state(){
 	
 	//check state
 	if (hsp != 0) state = states.WALK;
+	//if attack is something different to 0
+	if (attack) {
+		state = states.ATTACK;
+		// the current sub-image or frame shown for the instance of the sprite
+		// set it to 0 to start from the beginning of animation cycle
+		// in order to play the attack animation starting from the first frame
+		image_index = 0;
+	}
 	
 	//apply movement
 	collision();
